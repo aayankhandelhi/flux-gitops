@@ -27,3 +27,8 @@ spec:
           ignoredNamespaces:
             - kube-system
             - minside
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true          
