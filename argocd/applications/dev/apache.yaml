@@ -3,4 +3,6 @@ kind: Kustomization
 
 resources:
 
-- dev
+- nginx.yaml
+- apache.yaml
+- k8tz.yaml

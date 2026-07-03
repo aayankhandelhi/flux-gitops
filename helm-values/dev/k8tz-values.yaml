@@ -1,0 +1,9 @@
+namespace: k8tz
+
+timezone: Asia/Kolkata
+
+replicaCount: 1
+
+webhook:
+  ignoredNamespaces:
+    - kube-system
