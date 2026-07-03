@@ -12,18 +12,16 @@ spec:
     server: https://kubernetes.default.svc
     namespace: k8tz
 
-  sources:
+  source:
+    repoURL: https://k8tz.github.io/k8tz/
+    chart: k8tz
+    targetRevision: 0.9.0
 
-    - repoURL: https://k8tz.github.io/k8tz/
-      chart: k8tz
-      targetRevision: 0.9.0
-      helm:
-        valueFiles:
-          - $values/helm-values/dev/k8tz-values.yaml
-
-    - repoURL: https://github.com/aayankhandelhi/flux-gitops.git
-      targetRevision: main
-      ref: values
+    helm:
+      values: |
+        namespace: k8tz
+        timezone: Asia/Kolkata
+        replicaCount: 2
 
   syncPolicy:
     automated:
