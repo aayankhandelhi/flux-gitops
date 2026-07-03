@@ -26,3 +26,4 @@ spec:
         webhook:
           ignoredNamespaces:
             - kube-system
+            - minside
